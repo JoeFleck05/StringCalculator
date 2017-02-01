@@ -10,10 +10,15 @@
  */
 public class StringCalculator {
     
-    public int Add(String n){
+    public int Add(String[] n){
         int t;
-        t = Integer.parseInt(n);
-        return t;
+        int sumOfAllStrings = 0;
+       
+        for(String numberOf : n){
+            t = Integer.parseInt(numberOf);
+            sumOfAllStrings += t;
+        }
+        return sumOfAllStrings;
     }
     
 }

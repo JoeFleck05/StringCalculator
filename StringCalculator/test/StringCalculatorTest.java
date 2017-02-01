@@ -4,10 +4,6 @@
  * and open the template in the editor.
  */
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -19,14 +15,17 @@ public class StringCalculatorTest {
     
     StringCalculator sc = new StringCalculator();
     
-    private final String TEST_STRING_ONE = "0";
-    private final int EXPECT_INT_ONE = 0;
+    private final String[] TEST_STRING_ONE = {"0","1","3"};
+    private final int EXPECT_INT_ONE = 4;
     
-    private final String TEST_STRING_TWO = "1";
-    private final int EXPECT_INT_TWO = 1;
+    private final String[] TEST_STRING_TWO = {"1","43","7"};
+    private final int EXPECT_INT_TWO = 51;
     
-    private final String TEST_STRING_THREE = "2";
+    private final String[] TEST_STRING_THREE = {"2","0"};
     private final int EXPECT_INT_THREE = 2;
+    
+    private final String[] TEST_STRING_FOUR = {"0"};
+    private final int EXPECT_INT_FOUR = 0;
     
     public StringCalculatorTest() {
     }
@@ -44,4 +43,6 @@ public class StringCalculatorTest {
     public void testTwo(){ assertEquals(EXPECT_INT_TWO, sc.Add(TEST_STRING_TWO)); }
     @Test
     public void testThree(){ assertEquals(EXPECT_INT_THREE, sc.Add(TEST_STRING_THREE)); }
+    @Test
+    public void testFour(){ assertEquals(EXPECT_INT_FOUR, sc.Add(TEST_STRING_FOUR)); }
 }
