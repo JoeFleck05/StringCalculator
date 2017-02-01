@@ -10,4 +10,10 @@
  */
 public class StringCalculator {
     
+    public int Add(String n){
+        int t;
+        t = Integer.parseInt(n);
+        return t;
+    }
+    
 }
